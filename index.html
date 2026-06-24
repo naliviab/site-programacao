@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Padaria & Confeitaria - Doce Pão</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Doce Pão</h1>
+        <nav class="nav">
+          <button data-filter="all" class="filter active">Todos</button>
+          <button data-filter="paes" class="filter">Pães</button>
+          <button data-filter="confeitaria" class="filter">Confeitaria</button>
+          <button data-filter="bebidas" class="filter">Bebidas</button>
+        </nav>
+        <div class="cart" id="cart">
+          <button id="cart-toggle">Carrinho (<span id="cart-count">0</span>)</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Padaria & Confeitaria artesanal</h2>
+        <p>Produtos frescos todos os dias — sabores que abraçam.</p>
+      </section>
+
+      <section class="menu" id="menu">
+        <h3>Cardápio</h3>
+        <div class="menu-grid" id="items">
+          <!-- Items populated in HTML for simplicity -->
+          <article class="card" data-category="paes" data-price="0.75">
+            <div class="card-media">
+              <img src="pao frances.jpg" alt="Pão Francês">
+            </div>
+            <h4>Pão Francês (unidade)</h4>
+            <p class="desc">Pão crocante, miolo macio.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 0,75</span>
+              <button class="add" data-name="Pão Francês" data-price="0.75">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="paes" data-price="15.00">
+            <div class="card-media">
+              <img src="paodequeijo.jpeg" alt="Pão de Queijo">
+            </div>
+            <h4>Pão de Queijo (6 un.)</h4>
+            <p class="desc">Quentinho e saboroso — caixa com 6 unidades.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 15,00</span>
+              <button class="add" data-name="Pão de Queijo (6)" data-price="15.0">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="confeitaria" data-price="12.00">
+            <div class="card-media">
+              <img src="bolodenpica.jpeg" alt="Bolo de Chocolate">
+            </div>
+            <h4>Bolo de Chocolate (fatia)</h4>
+            <p class="desc">Cobertura cremosa e muito cacau.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 12,00</span>
+              <button class="add" data-name="Bolo de Chocolate (fatia)" data-price="12.0">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="confeitaria" data-price="6.50">
+            <div class="card-media">
+              <img src="cupkake.jpeg" alt="Cupcake Red Velvet">
+            </div>
+            <h4>Cupcake Red Velvet</h4>
+            <p class="desc">Clássico e macio.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 6,50</span>
+              <button class="add" data-name="Cupcake Red Velvet" data-price="6.5">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="bebidas" data-price="5.00">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&h=200&q=80" alt="Café Expresso">
+            </div>
+            <h4>Café Expresso</h4>
+            <p class="desc">Intenso e aromático.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 5,00</span>
+              <button class="add" data-name="Café Expresso" data-price="5.0">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="bebidas" data-price="9.00">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&h=200&q=80" alt="Cappuccino">
+            </div>
+            <h4>Cappuccino</h4>
+            <p class="desc">Espuma cremosa com chocolate.</p>
+            <div class="card-bottom">
+              <span class="price">R$ 9,00</span>
+              <button class="add" data-name="Cappuccino" data-price="9.0">Adicionar</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+        <h4>Carrinho</h4>
+        <ul id="cart-items"></ul>
+        <div class="cart-total">Subtotal: <strong id="cart-subtotal">R$ 0,00</strong></div>
+
+        <div class="delivery-box">
+          <label for="delivery-address">Endereço de entrega</label>
+          <textarea id="delivery-address" placeholder="Rua, número, bairro, cidade" rows="3"></textarea>
+          <div class="delivery-fee">Taxa (5%): <strong id="delivery-fee">R$ 0,00</strong></div>
+          <div class="delivery-total">Total com entrega: <strong id="total-with-delivery">R$ 0,00</strong></div>
+        </div>
+
+        <div class="cart-actions">
+          <button id="clear-cart">Esvaziar</button>
+          <button id="checkout">Finalizar</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Doce Pão — Padaria & Confeitaria. Telefone: (11) 99999-0000</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
